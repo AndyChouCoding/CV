@@ -7,9 +7,11 @@ interface MainProps {
 const Layout = ({ children }: MainProps) => {
   return (
     <>
-      <Header />
-      <Main>{children}</Main>
-      <Footer />
+      <div>
+        <Header />
+        <Main>{children}</Main>
+        <Footer />
+      </div>
     </>
   );
 };
@@ -18,25 +20,40 @@ export default Layout;
 const Header = () => {
   return (
     <>
-      <div className="">
-        <div>Header</div>
-        <div><Navbar /></div>
+      <div className="bg-amber-300 flex text-center">
+        <div className="p-3 w-[1280px] mx-[auto] my-[0] flex justify-between align-middle">
+          <div>AndyChou</div>
+        </div>
+        <div className="p-3">
+          <Navbar />
+        </div>
       </div>
-      
     </>
   );
 };
 const Navbar = () => {
-  return <>
-    <Link to="/">Home</Link>
-    <Link to="/swissKnife">SwissKnife</Link>
-  </>;
+  return (
+    <>
+      <div>
+        <Link to="/">Home</Link>
+        <Link to="/swissKnife">SwissKnife</Link>
+        <Link to="/project">Project</Link>
+        <Link to="/">About</Link>
+      </div>
+    </>
+  );
 };
 const Main = ({ children }: MainProps) => {
-  return <><div className="flex justify-center">{children}</div></>;
+  return (
+    <>
+      <div className="flex justify-center">{children}</div>
+    </>
+  );
 };
 const Footer = () => {
-  return <>
-    <div>Footer</div>
-  </>;
+  return (
+    <>
+      <div>Footer</div>
+    </>
+  );
 };

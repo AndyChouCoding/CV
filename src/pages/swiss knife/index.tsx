@@ -11,6 +11,7 @@ const SwissKnife = () => {
             <Link to="/swissKnife/ttt">TTT</Link>
             <Link to="/swissKnife/crud">CRUD</Link>
             <Link to="/swissKnife/weather">Weater</Link>
+            <Link to="/swissKnife/trafficLight">TrafficLight</Link>
           </div>
           <div>
             <Outlet />
